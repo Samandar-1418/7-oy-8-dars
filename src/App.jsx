@@ -49,21 +49,25 @@ function App() {
   function handleClick(value) {
     const updatedValue = inputValue + value;
   
-
-    if (updatedValue.length >= 2) {
-      const foundCompany = companies.find((company) =>
-        company.codes.includes(parseInt(updatedValue))
-      );
+    if (updatedValue.length <= 9) {
+      if (updatedValue.length >= 2) {
+        const foundCompany = companies.find((company) =>
+          company.codes.includes(parseInt(updatedValue))
+        );
   
-      if (foundCompany) {
-        setMatchedCompany(foundCompany);
+        if (foundCompany) {
+          setMatchedCompany(foundCompany);
+        } else {
+          alert('Bunday kompaniya topilmadi');
+        }
+      } else {
+        setMatchedCompany(null);
       }
-    } else {
-      setMatchedCompany(null);
-    } 
-    
-    setInputValue(updatedValue);
+  
+      setInputValue(updatedValue);
+    }
   }
+  
   
   function handleChange(e) {
     console.log(e.target.value);
