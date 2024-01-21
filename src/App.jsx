@@ -43,13 +43,13 @@ function App() {
   justify-content: end;
 
   `
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('+');
   const [matchedCompany, setMatchedCompany] = useState(null);
 
   function handleClick(value) {
     const updatedValue = inputValue + value;
   
-    if (updatedValue.length <= 9) {
+    if (updatedValue.length <= 10  ) {
       if (updatedValue.length >= 2) {
         const foundCompany = companies.find((company) =>
           company.codes.includes(parseInt(updatedValue))
@@ -71,7 +71,7 @@ function App() {
     console.log(e.target.value);
   } 
   function handleClear (){
-    setInputValue('');
+    setInputValue('+');
     setMatchedCompany(null)
   }
   return (
@@ -92,7 +92,7 @@ function App() {
         <Button text='7' onClick={() => handleClick('7')} />
         <Button text='8' onClick={() => handleClick('8')} />
         <Button text='9' onClick={() => handleClick('9')} />
-        <Button text='+' onClick={() => handleClick('+')} />
+        <Button text='+'  onClick={() => handleClick('+')}  />
         <Button text='0' onClick={() => handleClick('0')} />
         <Button text='delete' onClick={handleClear} />
       </Card>
