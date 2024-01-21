@@ -7,12 +7,13 @@
  width: 600px;
  padding: 20px;
  margin: 100px auto;
- background-color:aquamarine;
+ background-color:white;
+ border:1px solid black;
+ border-radius: 10px;
 }
 .card {
   width: 180px;
-  border: 1px solid aqua;
 }
 img {
-  width: 100px;
+  width: 30px;
 }

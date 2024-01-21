@@ -17,9 +17,9 @@ width:30%;
 
 }
 `
-export default function Button({text}) {
+export default function Button({text, onClick}) {
    return (
 
-    <Buttons>{text}</Buttons>
+    <Buttons onClick={onClick}>{text}</Buttons>
   )
 }
