@@ -57,9 +57,7 @@ function App() {
   
         if (foundCompany) {
           setMatchedCompany(foundCompany);
-        } else {
-          alert('Bunday kompaniya topilmadi');
-        }
+        } 
       } else {
         setMatchedCompany(null);
       }
